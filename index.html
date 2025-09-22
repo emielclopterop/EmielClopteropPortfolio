@@ -39,14 +39,14 @@
             <h2>About Me</h2>
             <p class="section-subtitle">Passionate developer with an eye for detail and a love for clean, efficient solutions</p>
             <div class="about-content">
-                <img class="profile-img" src="Assets/fotoofme.jpeg" alt="Emiel Clopterop">
+                <img class="profile-img" src="Assets/fotovanmij.JPG" alt="Emiel Clopterop">
                 <div class="about-text">
-                    <p>I'm a creative and detail-oriented developer with a passion for building innovative web solutions. With expertise in modern technologies and a keen eye for design, I bring ideas to life through clean, efficient code.</p>
+                    <p>My name is Emiel, I’m 22 years old and originally from Gent, Belgium.</p>
                     
-                    <p>My journey in tech started several years ago, and since then I've been constantly learning and evolving with the industry. I believe in writing code that not only works but is maintainable, scalable, and makes a positive impact.</p>
-                    
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying the great outdoors. I'm always excited to take on new challenges and collaborate with like-minded individuals.</p>
-                    
+                   <p>I’m currently studying <strong>Interactive Media Development</strong> at <strong>Arteveldehogeschool</strong> (2023–2026). In September 2025, I will continue my studies abroad at the <strong>British Columbia Institute of Technology</strong>, focusing on Marketing Management.</p>
+
+                    <p>Before this, I studied <strong>Game Development / Independent Game Production</strong> at <strong>Howest – Digital Arts and Entertainment</strong> (Sep 2021 – Feb 2023), which gave me a strong foundation in design, creativity, and interactive media.</p>
+
                 </div>
             </div>
         </div>
@@ -54,33 +54,49 @@
 
     <!-- Skills Section -->
     <section id="skills">
-        <div class="container">
-            <h2>Skills & Technologies</h2>
-            <p class="section-subtitle">A comprehensive toolkit for building modern web applications</p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">FE</div>
-                    <h3>Frontend Development</h3>
-                    <p>Creating responsive, interactive user interfaces with HTML5, CSS3, JavaScript, React, and Vue.js. Focus on performance and user experience.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">BE</div>
-                    <h3>Backend Development</h3>
-                    <p>Building robust server-side applications with Node.js, Python, PHP, and database management with SQL and NoSQL solutions.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">UI</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing intuitive user experiences and interfaces using Figma, Adobe Photoshop, Adobe Illustrator and modern design principles.</p>
-                </div>
-                <div class="skill-card">
-                   <div class="skill-icon">UE</div>
-                    <h3>Unreal Engine</h3>
-                    <p>Creating immersive 3D experiences and games using Unreal Engine, with a focus on performance and visual fidelity.</p>
-                </div>
+    <div class="container">
+        <h2>Skills & Technologies</h2>
+        <p class="section-subtitle">A comprehensive toolkit for building modern web applications</p>
+        <div class="skills-grid">
+            <!-- First 3 skills (always visible) -->
+            <div class="skill-card">
+                <div class="skill-icon">FE</div>
+                <h3>Frontend Development</h3>
+                <p>Creating responsive, interactive user interfaces with HTML5, CSS3, JavaScript, React, and Vue.js. Focus on performance and user experience.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">3D</div>
+                <h3>3D Modeling</h3>
+                <p>Creating detailed 3D models using Blender and Autodesk Maya. Focus on topology, UV mapping, and texturing.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">UI</div>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive user experiences and interfaces using Figma, Adobe Photoshop, Adobe Illustrator and modern design principles.</p>
+            </div>
+            
+            <!-- Hidden skills (initially hidden) -->
+            <div class="skill-card hidden">
+               <div class="skill-icon">UE</div>
+                <h3>Unreal Engine</h3>
+                <p>Creating immersive 3D experiences and games using Unreal Engine, with a focus on performance and visual fidelity.</p>
+            </div>
+            <div class="skill-card hidden">
+                <div class="skill-icon">C#</div>
+                <h3>MonoGame</h3>
+                <p>Developing 2D games using C# with the MonoGame framework, focusing on custom gameplay systems and efficient, framework-based development.</p>
             </div>
         </div>
-    </section>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn">
+                Load More Skills
+                <span class="arrow">↓</span>
+            </button>
+        </div>
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -89,7 +105,7 @@
             <p class="section-subtitle">A showcase of my recent work and technical expertise</p>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img">🚀</div>
+                    <img class="project-img" src="Assets/muzikalespiegel.png" alt="De Muzikale Spiegel">
                     <div class="project-content">
                         <h3 class="project-title">De Muzikale Spiegel</h3>
                         <p class="project-desc">The app uses your webcam to detect facial expressions and emotions, then dynamically generates music that matches your current emotional state in real-time.</p>
@@ -99,8 +115,7 @@
                             <span class="tech-tag">face-api.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -115,25 +130,26 @@
                             <span class="tech-tag">TouchDesigner</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-img">📊</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Swords & Arenas</h3>
-                        <p class="project-desc">A comprehensive analytics dashboard with interactive charts, real-time data visualization, custom reporting, and advanced filtering capabilities.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unreal Engine</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+  <img class="project-img" src="Assets/swordsandarenas.PNG" alt="Swords & Arenas">
+  <div class="project-content">
+    <h3 class="project-title">Swords & Arenas</h3>
+    <p class="project-desc">
+      An innovative Unreal Engine 5 project where you begin in a blacksmith’s forge 
+      to explore and customize swords. The experience continues in an arena where 
+      you battle various enemies in a Dark Souls–inspired environment.
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">Unreal Engine 5</span>
+    </div>
+  </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -325,6 +341,30 @@
         
         // Test if form exists
         console.log("Form found:", document.getElementById('contactForm') !== null);
+
+        // Load More Skills functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            const hiddenSkills = document.querySelectorAll('.skill-card.hidden');
+            
+            // Show all hidden skills with animation
+            hiddenSkills.forEach((skill, index) => {
+                setTimeout(() => {
+                    skill.classList.remove('hidden');
+                    skill.style.animation = 'slideIn 0.5s ease forwards';
+                }, index * 100); // Stagger the animations
+            });
+            
+            // Hide the load more button
+            setTimeout(() => {
+                loadMoreBtn.classList.add('hidden');
+            }, 300);
+        });
+    }
+});
     </script>
 </body>
 </html>
