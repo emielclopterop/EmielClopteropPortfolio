@@ -352,6 +352,22 @@ h2::after {
     overflow: hidden;
     border: 5px solid #000000;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}.profile-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* This will crop the image to fit while maintaining aspect ratio */
+    object-position: center; /* Centers the crop */
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #000000;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove the pseudo-elements that were creating the "EC" overlay */
+.profile-img::before,
+.profile-img::after {
+    display: none;
 }
 
 .profile-img::before {
@@ -459,11 +475,25 @@ h2::after {
     color: rgba(0, 0, 0, 0.05);
 }
 
+/* Replace your existing .skills-grid rule with this: */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Changed from auto-fit to exactly 3 columns */
     gap: 2rem;
     margin-top: 3rem;
+}
+
+/* Add this responsive rule to handle smaller screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
 }
 
 .skill-card {
@@ -579,13 +609,6 @@ h2::after {
     left: 0;
     right: 0;
     height: 5px;
-    background: repeating-linear-gradient(
-        90deg,
-        #000000 0px,
-        #000000 20px,
-        transparent 20px,
-        transparent 30px
-    );
     z-index: 2;
 }
 
@@ -957,3 +980,71 @@ html {
         .loading-text {
             font-weight: 500;
         }
+
+        /* Hidden skills initially */
+.skill-card.hidden {
+    display: none;
+}
+
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.load-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: #000000;
+    border: 3px solid #000000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.load-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.load-more-btn:hover::before {
+    left: 0;
+}
+
+.load-more-btn:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.load-more-btn.hidden {
+    display: none;
+}
+
+/* Animation for new skills appearing */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
