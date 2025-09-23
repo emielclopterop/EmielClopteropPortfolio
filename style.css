@@ -355,8 +355,8 @@ h2::after {
 }.profile-img {
     width: 100%;
     height: 400px;
-    object-fit: cover; /* This will crop the image to fit while maintaining aspect ratio */
-    object-position: center; /* Centers the crop */
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -364,7 +364,6 @@ h2::after {
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* Remove the pseudo-elements that were creating the "EC" overlay */
 .profile-img::before,
 .profile-img::after {
     display: none;
@@ -475,24 +474,22 @@ h2::after {
     color: rgba(0, 0, 0, 0.05);
 }
 
-/* Replace your existing .skills-grid rule with this: */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Changed from auto-fit to exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }
 
-/* Add this responsive rule to handle smaller screens */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: 1fr; /* Stack vertically on mobile */
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -950,38 +947,37 @@ html {
     background: #333333;
 }
 
-/* Additional styles for the contact form functionality */
-        .status-message {
-            margin-top: 15px;
-            padding: 12px 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
-            font-size: 14px;
-        }
+.status-message {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+}
 
-        .status-message.success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
 
-        .status-message.error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
+ .status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
 
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+ }
 
-        .loading-text {
-            font-weight: 500;
-        }
+.loading-text {
+    font-weight: 500;
+ }
 
-        /* Hidden skills initially */
+        
 .skill-card.hidden {
     display: none;
 }
