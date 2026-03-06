@@ -10,7 +10,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#home" class="logo">Emiel Clopterop</a>
+            <a href="#home" class="logo">EMIEL.</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -41,11 +41,16 @@
             <div class="about-content">
                 <img class="profile-img" src="Assets/fotovanmij.JPG" alt="Emiel Clopterop">
                 <div class="about-text">
-                    <p>My name is Emiel, I’m 22 years old and originally from Gent, Belgium.</p>
+                    <p>My name is Emiel, I’m 23 years old and originally from Gent, Belgium.</p>
                     
-                   <p>I’m currently studying <strong>Interactive Media Development</strong> at <strong>Arteveldehogeschool</strong> (2023–2026). In September 2025, I will continue my studies abroad at the <strong>British Columbia Institute of Technology</strong>, focusing on Marketing Management.</p>
+                   <p>I’m currently studying <strong>Interactive Media Development</strong> at <strong>Arteveldehogeschool</strong> (2023–2026).
+                    <p>Before this, I studied <strong>Game Development / Independent Game Production</strong> at <strong>Howest – Digital Arts and Entertainment</strong> 
+                        (Sep 2021 – Feb 2023), which gave me a strong foundation in design, creativity, and interactive media.
+                    </p>
 
-                    <p>Before this, I studied <strong>Game Development / Independent Game Production</strong> at <strong>Howest – Digital Arts and Entertainment</strong> (Sep 2021 – Feb 2023), which gave me a strong foundation in design, creativity, and interactive media.</p>
+                    <p>During my studies, I spent 4 months studying abroad at the <strong>British Columbia Institute of Technology</strong>, focusing on Marketing Management
+                    (Sep 2025 - Dec 2025).
+                    </p>
 
                 </div>
             </div>
@@ -58,16 +63,16 @@
         <h2>Skills & Technologies</h2>
         <p class="section-subtitle">A comprehensive toolkit for building modern web applications</p>
         <div class="skills-grid">
-            <!-- First 3 skills (always visible) -->
+            <!-- First 3 skills -->
             <div class="skill-card">
                 <div class="skill-icon">FE</div>
                 <h3>Frontend Development</h3>
                 <p>Creating responsive, interactive user interfaces with HTML5, CSS3, JavaScript, React, and Vue.js. Focus on performance and user experience.</p>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">3D</div>
-                <h3>3D Modeling</h3>
-                <p>Creating detailed 3D models using Blender and Autodesk Maya. Focus on topology, UV mapping, and texturing.</p>
+               <div class="skill-icon">UE</div>
+                <h3>Unreal Engine</h3>
+                <p>Creating immersive 3D experiences and games using Unreal Engine, with a focus on performance and visual fidelity.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">UI</div>
@@ -75,17 +80,23 @@
                 <p>Designing intuitive user experiences and interfaces using Figma, Adobe Photoshop, Adobe Illustrator and modern design principles.</p>
             </div>
             
-            <!-- Hidden skills (initially hidden) -->
+            <!-- Hidden skills -->
+             <div class="skill-card hidden">
+                <div class="skill-icon">C#</div>
+                <h3>Unity</h3>
+                <p>Developing 3D/2D games using C# with the Unity game engine, focusing on custom gameplay systems and efficient, framework-based development.</p>
+            </div>
             <div class="skill-card hidden">
-               <div class="skill-icon">UE</div>
-                <h3>Unreal Engine</h3>
-                <p>Creating immersive 3D experiences and games using Unreal Engine, with a focus on performance and visual fidelity.</p>
+                <div class="skill-icon">3D</div>
+                <h3>3D Modeling</h3>
+                <p>Creating detailed 3D models using Blender and Autodesk Maya. Focus on topology, UV mapping, and texturing.</p>
             </div>
             <div class="skill-card hidden">
                 <div class="skill-icon">C#</div>
                 <h3>MonoGame</h3>
                 <p>Developing 2D games using C# with the MonoGame framework, focusing on custom gameplay systems and efficient, framework-based development.</p>
             </div>
+
         </div>
         
         <!-- Load More Button -->
@@ -150,6 +161,36 @@
   </div>
 </div>
 
+<div class="project-card hidden">
+  <img class="project-img" src="Assets/startscreenshot.png" alt="Bobert">
+  <div class="project-content">
+    <h3 class="project-title">Bobert: The Monster Slayer</h3>
+    <p class="project-desc">
+      A personal 2D game where development started with using MonoGame and C#, development has since been changed to the Unity Game Engine. In this game, you play as Bobert,
+      a brave character on a quest to slay monsters who will just keep on coming back! Still a work in progress...
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag">C#</span>
+    </div>
+    <div class="project-tech">
+      <span class="tech-tag">MonoGame</span>
+    </div>
+    <div class="project-tech">
+      <span class="tech-tag">Unity</span>
+    </div>
+  </div>
+</div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreProjectsBtn">
+                    Load More Projects
+                    <span class="arrow">↓</span>
+                </button>
+            </div>
+        </div>
+    </section>
             </div>
         </div>
     </section>
@@ -175,7 +216,7 @@
                         <div class="contact-icon">📱</div>
                         <div>
                             <strong>Phone</strong><br>
-                            BE +32471210969 / CAD +1 (437) 908-5615
+                            BE +32471210969
                         </div>
                     </div>
                     
@@ -183,7 +224,7 @@
                         <div class="contact-icon">📍</div>
                         <div>
                             <strong>Location</strong><br>
-                            Gent, Belgium / Vancouver, Canada
+                            Gent, Belgium
                         </div>
                     </div>
                 </div>
@@ -361,6 +402,34 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide the load more button
             setTimeout(() => {
                 loadMoreBtn.classList.add('hidden');
+            }, 300);
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreProjectsBtn = document.getElementById('loadMoreProjectsBtn');
+    
+    if (loadMoreProjectsBtn) {
+        loadMoreProjectsBtn.addEventListener('click', function() {
+            const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+            
+            // Show all hidden projects with animation
+            hiddenProjects.forEach((project, index) => {
+                setTimeout(() => {
+                    project.classList.remove('hidden');
+                    project.style.animation = 'slideIn 0.5s ease forwards';
+                    
+                    // Remove animation after it completes to allow hover effects to work properly
+                    project.addEventListener('animationend', function() {
+                        project.style.animation = '';
+                    }, { once: true });
+                }, index * 100); // Stagger the animations
+            });
+            
+            // Hide the load more button
+            setTimeout(() => {
+                loadMoreProjectsBtn.classList.add('hidden');
             }, 300);
         });
     }
